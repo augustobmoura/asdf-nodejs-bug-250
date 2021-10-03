@@ -13,6 +13,7 @@ source $ASDF_INSTALL_DIR/asdf.sh
 
 if ! asdf plugin-list | grep nodejs; then
   git clone https://github.com/augustobmoura/asdf-nodejs.git "$ASDF_INSTALL_DIR/plugins/nodejs"
+  ls -lah  "$ASDF_INSTALL_DIR/plugins/nodejs"
   git -C "$ASDF_INSTALL_DIR/plugins/nodejs" checkout 95a2091f7b64497c002dc709b267f5d03f302498
   asdf reshim nodejs
 fi
